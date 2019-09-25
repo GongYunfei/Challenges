@@ -1,0 +1,43 @@
+这里有两种方法：
+
+一：CSS判断横屏竖屏
+
+写在同一个CSS中
+
+XML/HTML Code复制内容到剪贴板
+@media screen and (orientation: portrait) {   
+  /*竖屏 css*/   
+}    
+@media screen and (orientation: landscape) {   
+  /*横屏 css*/   
+}  
+分开写在2个CSS中
+
+竖屏
+
+XML/HTML Code复制内容到剪贴板
+<link rel="stylesheet" media="all and (orientation:portrait)" href="portrait.css">   
+横屏
+
+XML/HTML Code复制内容到剪贴板
+<link rel="stylesheet" media="all and (orientation:landscape)" href="landscape.css">   
+二：JS判断横屏竖屏
+
+XML/HTML Code复制内容到剪贴板
+//判断手机横竖屏状态：   
+window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {   
+        if (window.orientation === 180 || window.orientation === 0) {    
+            alert('竖屏状态！');   
+        }    
+        if (window.orientation === 90 || window.orientation === -90 ){    
+            alert('横屏状态！');   
+        }     
+    }, false);   
+//移动端的浏览器一般都支持window.orientation这个参数，通过这个参数可以判断出手机是处在横屏还是竖屏状态。
+
+屏幕方向对应的window.orientation值：
+
+ipad,iphone： 90 或 -90 横屏
+ipad,iphone： 0 或180 竖屏
+Andriod：0 或180 横屏
+Andriod： 90 或 -90 竖屏
