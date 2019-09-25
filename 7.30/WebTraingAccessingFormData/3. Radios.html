@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Created by Hao Zhang -->
+
+<!-- References: 
+        1) http://www.w3schools.com/jsref/prop_checkbox_checked.asp
+        2) http://www.w3schools.com/jsref/met_doc_getelementsbyname.asp
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Accessing Radio Data</title>
+        <script>
+			function getRadio() {
+			   var radioObject = document.getElementById("raptor"); 
+			   console.log(radioObject.checked);    
+			}
+			function setRadio() {
+			   document.getElementById("trex").checked = true;    
+			}
+			function getAllRadio(){
+				var radioObjects = document.getElementsByName("dinosaurs"); 
+	
+				console.dir(radioObjects); 
+	
+				for(var i = 0; i < radioObjects.length; i++){
+					console.log(radioObjects[i].id + " = " + radioObjects[i].checked ); 
+				}
+			}
+        </script>
+    </head>
+    <body>
+        <form action="#" method="POST">
+            <h3>What is your favorite dinosaur?</h3>
+            <div>
+                <input id="raptor" type="radio" name="dinosaurs" value="velociraptor" checked>
+                <label for="raptor">Velociraptor</label>
+            </div>
+            <div>
+                <input id="iguanodon" type="radio" name="dinosaurs" value="iguanodon">
+                <label for="iguanodon">Iguanodon</label>
+            </div>
+            <div>
+                <input id="trex" type="radio" name="dinosaurs" value="trex">
+                <label for="trex">Trex</label>
+            </div>
+            <hr>
+            <button type="button" onclick="getRadio()">Get Radio</button>
+            <button type="button" onclick="setRadio()">Set Radio</button>
+            <button type="button" onclick="getAllRadio()">Get All Radio</button>    
+        </form>
+    </body>
+</html>

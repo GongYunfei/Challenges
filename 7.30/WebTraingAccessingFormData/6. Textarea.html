@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Created by Hao Zhang -->
+
+<!-- References: 
+        1) http://www.w3schools.com/jsref/prop_html_innerhtml.asp
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Form Elements</title>
+        <script>
+            
+			function getTextarea() {
+				var textareaObject = document.getElementById('comments');
+				
+				console.dir(textareaObject); 
+                
+                console.log(textareaObject.value);	
+			}
+			function setTextarea() {
+				var textareaObject = document.getElementById('comments');
+				
+				console.dir(textareaObject); 
+                
+                textareaObject.value = "Something new!";
+			}
+			function clearTextarea() {
+				var textareaObject = document.getElementById('comments');
+				
+				console.dir(textareaObject); 
+				
+				textareaObject.value = null;
+			} 
+		</script>
+    </head>
+    <body>
+        <form action="#" method="POST">
+            <h3>Comments?</h3>
+            <div>
+                <textarea id="comments" name="comments">I like CS2830... 
+                	but my instructor is kinda weird.</textarea>
+            </div>
+            
+            <hr>
+		
+            <button type="button" onclick="getTextarea()">Get Textarea</button>
+            <button type="button" onclick="setTextarea()">Set Textarea</button>
+            <button type="button" onclick="clearTextarea()">Clear Textarea</button>
+        </form>
+    </body>
+</html>

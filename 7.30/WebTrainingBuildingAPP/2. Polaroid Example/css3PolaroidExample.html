@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Created by Hao Zhang -->
+
+<!-- Main Purpose: To show you how to use the z-index properly. -->
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>CSS3 Polaroid Example</title>
+	<style>
+        @font-face {
+            font-family: myFont;
+            src: url("fonts/PermanentMarker.ttf"); 
+        }
+        body {
+            margin: 30px;
+            background-color: #E9E9E9;
+        }
+        .polaroid {
+            position:relative;
+            width: 520px;
+            padding: 10px 10px 20px 10px;
+            text-align: center;
+            border: 1px solid #888;
+            background-color: white;
+            font-size: 16pt;
+            font-family: myFont;
+            transition: transform .3s;
+        }
+        .polaroid:hover {
+            z-index: 1;
+            transform: rotate(0deg);
+            box-shadow: 0 0 10px #555;
+        }  
+        .rotateLeft {
+            transform: rotate(-8deg);
+        }
+        .rotateRight {
+            transform: rotate(7deg);
+        }
+        
+        img {
+            height: 400px;
+            width: 500px; 
+        }
+        .inline {
+            display: inline-block; 
+        }
+        @keyframes roll {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(1720deg);
+            }
+        }
+        #polaroidSpin:hover {
+            -webkit-animation: roll 2s;
+            animation: roll 2s;
+        }
+	</style>
+</head>
+<body>
+    <div class="inline">
+	<div class="polaroid rotateLeft inline">
+		<img src="images/shanghai2.jpg" alt="pic1">
+        <h2>Shanghai, China</h2>
+	</div>
+	<div class="polaroid rotateRight inline">
+		<img src="images/golden.jpg" alt="pic2">
+        <h2>Golden Gate Bridge</h2>
+	</div>
+    <div class="polaroid rotateRight inline">
+		<img src="images/grand.jpg" alt="pic3">
+        <h2>Grand Canyon Arizona</h2>
+	</div>
+    <div id="polaroidSpin" class="polaroid rotateLeft inline">
+		<img src="images/missouri.jpg" alt="pic4">
+        <h2>Fall In Missouri</h2>
+	</div>
+    </div>
+</body>
+</html>

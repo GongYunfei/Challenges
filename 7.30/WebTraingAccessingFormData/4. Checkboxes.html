@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Created by Hao Zhang -->
+
+<!-- References: 
+        1) http://www.w3schools.com/jsref/prop_checkbox_checked.asp
+        2) http://www.w3schools.com/jsref/met_doc_getelementsbyname.asp
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Accessing Checkbox Data</title>
+        <script>
+			function toggleCheck(){
+                var checkboxObject = document.getElementById("Coding"); 
+
+                (checkboxObject.checked) ? checkboxObject.checked = false : checkboxObject.checked = true; 
+            }
+            function toggleAllCheck() {     
+                var checkboxObjects = document.getElementsByName("interests[]"); 
+                
+                for(var i = 0; i < checkboxObjects.length; i++){
+                    (checkboxObjects[i].checked) ? 
+                    	checkboxObjects[i].checked = false : 
+                    	checkboxObjects[i].checked = true; 
+                }
+			}
+         </script>   
+    </head>
+    <body>
+        <form action="#" method="POST">
+            <h3>What are your interests?</h3>
+            <div>
+                <input id="Coding" type="checkbox" name="interests[]" value="Coding" checked>
+                <label for="Coding">Coding</label>
+                <br>
+                <input id="sleeping" type="checkbox" name="interests[]" value="sleeping" checked>
+                <label for="sleeping">Sleeping</label>
+                <br>
+                <label for="wakeboarding">Wake Boarding</label>
+                <input id="wakeboarding" type="checkbox" name="interests[]" value="wakeboarding">
+                <br>
+                <label for="skating">Skateboarding</label>
+                <input id="skating" type="checkbox" name="interests[]" value="skating">
+                <br>
+                <label for="Drums">Drums and Percussion</label>
+                <input id="Drums" type="checkbox" name="interests[]" value="drums&percussion">
+            </div>
+            <hr>
+            <button type="button" onclick="toggleCheck()">Toggle Single Checkbox</button>
+            <button type="button" onclick="toggleAllCheck()" >Toggle All Checkboxes</button>   
+        </form>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Created by Hao Zhang -->
+
+<!-- References: 
+        1) http://www.w3schools.com/jsref/prop_html_innerhtml.asp
+        2) http://www.w3schools.com/jsref/prop_select_selectedindex.asp
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Accessing Dropdown Data</title>
+       <script> 
+            function getSelect() {
+                var selectObject = document.getElementById("foods"); 
+                
+                console.dir(selectObject); 
+                
+                console.log('Selected: ' + selectObject.selectedIndex + ' ' + selectObject.value); 
+                
+                console.log(selectObject.options[selectObject.selectedIndex].innerHTML);      
+            }
+           
+           function setSelect(){
+               var selectObject = document.getElementById("foods"); 
+               
+               selectObject.selectedIndex = 1; 
+           }
+		</script>
+    </head>
+    <body>
+        <form action="#" method="POST">
+            <h3>What do you like to eat?</h3>
+            <select id="foods" name="foods">
+                <option value="baozi">BaoZi</option>
+                <option value="chicken">Chicken</option>
+                <option value="creamPies">Oatmeal Cream Pies</option>
+                <option value="chickalfredo">Chicken Alfredo</option>
+                <option value="poptarts" selected>Poptarts</option>
+                <option value="cheese">Cheese</option> 
+            </select>
+           
+            <hr>
+		
+            <button type="button" onclick="getSelect()" >Get Select</button>
+            <button type="button" onclick="setSelect()">Set Select</button>
+        </form>
+    </body>
+</html>

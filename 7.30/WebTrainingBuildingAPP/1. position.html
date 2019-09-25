@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- Created by Hao Zhang -->
+
+<!-- Main Purpose: To show you what the position property is, how it works, and what it does. 
+		This will also show you how to properly use the z-index with position. -->
+	
+<!-- References: 
+		1) http://www.w3schools.com/css/css_positioning.asp
+		2) http://www.w3schools.com/cssref/pr_class_position.asp 
+		3) http://www.w3schools.com/cssref/pr_pos_z-index.asp
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS Position</title>
+		<style>
+			* {
+				margin: 0;
+			}
+
+			div {
+				width: 500px;
+				height: 100px;
+			}
+
+			#div1 {
+				background-color: forestgreen;
+			}
+		
+			#div2 {
+				background-color: red;
+				position: relative;
+				top: 10px;
+				left: 100px;
+				z-index: -1; 
+			}
+		
+			#div3 {
+				background-color: yellow;
+				margin-bottom: 5000px;
+			}
+		
+			#mini {
+				background-color: powderblue;
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+			}
+
+			div.fixed {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 300px;
+				border: 3px solid #73AD21;
+			}
+		
+			p.middle {
+				 position: absolute; 
+				 top: 50%;
+			}
+			p.bottom {
+				margin-bottom: 150px;  
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div id="div1"></div>
+	
+		<p>An element with position: absolute; is positioned relative to the nearest 
+				positioned ancestor (instead of positioned relative to the viewport, 
+				like fixed):</p>
+		<div id="div2">
+			<div id="mini"></div>
+		</div>
+		<div id="div3"></div>
+		<p class="bottom">An element with position: fixed; is positioned relative to 
+			the viewport, which means it always stays in the same place even if the 
+			page is scrolled:</p>
+
+		<div class="fixed"><p class="middle">This div element has position: 
+			fixed;</p></div>
+	</body>
+</html>
