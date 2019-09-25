@@ -1,0 +1,18 @@
+
+        .sidebar {
+            width: 40%;
+            float: left;
+            background: none repeat scroll 0 0 rgba(44, 44, 44, 0.7);
+        }
+
+        #list {
+            position: relative;
+        }
+
+        #list ul li {
+            float: left;
+            width: 50%;
+        }
+
+    
+

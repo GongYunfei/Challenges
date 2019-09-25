@@ -1,0 +1,384 @@
+@font-face{
+	font-family: "Permanent Marker";
+	src: url("../fonts/PermanentMarker-Regular.ttf");
+}
+
+/* The background of the website should be anything but white */
+body{
+	background-color: lightseagreen;
+	
+}
+
+/* Movie Trailer */
+
+.MovieTrailer{
+	display:none;
+}
+iframe{
+	
+	width: 500px;
+	height: 300px;
+	position: fixed;
+	border: 0px;
+    padding-left: 600px;
+	display:block;
+
+/*	display:none;*/
+	
+}
+
+.CButton{
+	position: fixed;
+	margin-left: 700px;
+	margin-top: 320px;
+/*	font-display: block;*/
+	font-size:35px;
+	font-style: oblique;
+	color:darkgoldenrod;
+}
+
+/* Target attribute information abtained from the reference of W3C CSSS */
+.MovieTrailer:target{
+	display:block;
+}
+iframe:target{
+	display:none;
+	src:url("www.google.com");
+}
+
+/* MovieTheaterTable Style */
+.MovieTheaterTable{
+	
+	/* Table Collapse and the table width should be 100% of the page */
+	border-collapse: collapse;
+	width: 100%;
+	/* The first font family should be "Arial", the backups should be “Helvetica” and “Sansserif” */
+	font-family: Arial, Helvetica, sans-serif;
+
+	
+}
+
+.MovieTheaterTable th, .MovieTheaterTable td{
+	/*The border should be solid black at a size of your choosing other than
+the default size
+	*/
+	border: 2px solid black;
+	
+	
+}
+
+/* Header style 
+Both Headers:
+1. Have to span across the columns and be centered on the page
+2. Font family should be “Permanent Marker”
+1. You can link from google, as shown in class
+3. Backup font should be Cursive and then Arial.
+
+*/
+
+.MovieTheaterTable .header{
+	
+	background-color: darkgray;
+	/* Font family should be “Permanent Marker” */
+	font-family: "Permanent Marker", Cursive, Arial;
+	color:saddlebrown;
+}
+
+/*
+The first header should be larger than the second one
+*/
+.headerFirst{
+	 
+	font-size: 30px;
+	}
+.headerSecond{
+	
+    font-size: 20px;
+
+}
+
+/* For the “Poster”, “Movie”, “Rating”, “Length”, “Showtimes”, and “Amenities” put any
+background color other than black and text color other than the default 
+
+“Poster”, “Movie”, “Rating”, “Length”, “Showtimes”, “Amenities” need to be centered in the
+cell (row 3)
+
+*/
+
+
+.MovieTheaterTable .Row3{
+	background-color: lightyellow;
+	color: darkblue;
+	text-align: center;
+}
+
+
+
+
+/*
+Poster images height is 200px
+*/
+.MovieTheaterTable .PosterImage{
+	height: 200px;
+	
+}
+
+
+
+/* Even rows, following the 3rd row (row with “Poster”, “Movie”, “Rating”, etc.) need to
+have a background color of gainsboro
+*/
+.MovieTheaterTable tr:nth-child(4){
+	background-color: gainsboro;
+}
+.MovieTheaterTable tr:nth-child(6){
+	background-color: gainsboro;
+}
+.MovieTheaterTable tr:nth-child(7){
+	background-color: gainsboro;
+}
+/* Odd rows following the 4th row can be white */
+.MovieTheaterTable tr:nth-child(8){
+	background-color: white;
+}
+.MovieTheaterTable tr:nth-child(9){
+	background-color: white;
+}
+.MovieTheaterTable tr:nth-child(10){
+	background-color: white;
+}
+.MovieTheaterTable tr:nth-child(11){
+	background-color: white;
+}
+/* center the text in all of the “odd” columns */
+.MovieTheaterTable td:nth-child(odd){
+   text-align: center;
+}
+
+.MovieTheaterTable td:nth-child(even){
+	align-content: left;
+	
+}
+.MovieTheaterTable tr:nth-child(8) td:nth-child(6) {
+   text-align: center;
+}
+
+.MovieTheaterTable tr:nth-child(8) td:nth-child(7) {
+   text-align: left;
+}
+
+.MovieTheaterTable .AllCenter{
+   text-align: center;
+}
+.MovieTheaterTable td:nth-child(even){
+	align-content: left;
+	
+}
+/*
+.MovieTheaterTable td:nth-child(7){
+	align-content: center;
+	
+}
+*/
+.MovieTheaterTable .daytimeShow{
+	background-color: red;
+}
+
+.MovieTheaterTable:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+	
+
+.WrapperDiv{
+	/* 
+	4. Include a top and bottom margin of 10px
+    5. The wrapper div should be centered on the page 
+	
+	*/
+	margin: 10px auto; 
+	
+	
+	/* 1. should have a width of 80% */
+	width: 80%;
+	height:322px;
+	/* 2. Have a box-shadow other than default */
+	box-shadow: 1px 1px 3px 3px gray;
+		
+	/* 3. Have a 2px border of your choosing other than default */
+	border-width: 2px;
+	background-color: white;
+	
+   
+ 	   	  
+}
+.WrapperDiv:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* LeftColumn style */
+.LeftColumn{
+	
+/*
+1. The height of the image should be 300px
+2. Include a width of 20%
+3. Image should be on the very left of container (reference screenshots below)
+4. Include a 1px solid black border around the image
+5. Create a 10px margin around the image
+6. Make the image one of the movies from the list
+	
+*/
+	float: left;
+	width: 20%;
+	
+/*
+	width: auto;
+	height:auto;
+*/
+	
+/*
+	content-width:300px
+	margin-top:    10px
+	margin-bottom: 10px
+	border-top:    1px
+	border-bottom: 1px
+	height:        322px
+	
+*/
+
+}
+
+.LeftColumn .Image{
+	float: left;
+	height:300px;
+	width:95%;
+	margin-left: 10px;
+    margin-right: 10px;
+    margin-top:10px;
+    margin-bottom:10px;
+	border: 1px solid black;
+	
+	
+}
+
+/* MiddleColumn style */
+.MiddleColumn{
+ 
+	/* 2. It should sit next to the image */
+	float:left;
+	
+	/* 1. This div should have a width of 40% */
+	width:40%;
+	
+/*	3. Give it a font other than default
+	4. Make the font size other than default
+*/
+	font-family: "Times New Roman", Helvetica, sans-serif;
+	font-size: 15px;
+	color: gray;
+	
+	/* 5. Provide a top margin of 10px */
+	margin: 10px;
+     /* Use text-align left */
+	text-align: left;
+   
+  
+}
+
+.MiddleColumn .MovieTitle{
+	
+	
+	
+}
+
+.MiddleColumn .HRLine{
+	
+	width: 80%;
+	float:left;
+	
+	
+}
+
+.MiddleColumn .RatingLength{
+	
+	font-size: 25px;
+	color: gray;
+	
+}
+
+.MiddleColumn .Amenities{
+    font-size: 25px;
+	float:left;
+}
+
+/* RightColumn style */
+.RightColumn{
+	
+	float: left;
+	
+/*
+1. Include a percentage width that will have this right div fit perfectly in the
+container next to the others. (Hint: try around 35%. The margin of the image
+on the left keeps us from doing 40% width on the right because image physical
+width of 20% + 20px of margin was initialized earlier).	
+	
+*/
+	width: 35%;
+	
+	
+/*	3. Give it a font other than default
+	4. Make the font size other than default
+*/
+	font-family: "Times New Roman", Helvetica, sans-serif;
+	font-size: 15px;
+	color: gray;
+	
+	/* 5. Provide a top margin of 10px */
+	margin-top:10px;
+
+	
+
+    
+    /* Use text-align left */
+	text-align: right;
+	
+}
+
+.RightColumn .Viewingtimes{
+	
+}
+
+.RightColumn .HRLine{
+	width: 90%;
+	float:right;
+
+}
+
+.RightColumn .DisplayTime{
+	
+	margin: 20px auto;
+	width: 90%;
+	border-spacing: 35px;
+	
+}
+
+td {
+	
+	border: 2px solid gray;
+	text-align: center;
+}
+
+
+.BackgroundDiv{
+	background-color: lightblue;
+	margin: 10px;
+	box-shadow: 1px 1px 3px 3px lightblue;
+		
+	/* 3. Have a 2px border of your choosing other than default */
+	border-width: 2px;
+	
+}

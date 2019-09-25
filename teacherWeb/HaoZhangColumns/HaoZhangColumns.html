@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+Name: Hao Zhang
+
+Date: 02/01/2019
+Challenge 3: Multi-Column Layout
+-->
+<html lang="en">
+
+<head>
+    <!-- param, meta, styles, scripts -->
+    <title> Hao Zhang's Multi-Column Layout </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/HaoZhangColumns.css">
+</head>
+
+<body>
+    <!--
+
+    Create a Horizontal style Navbar with three buttons.
+-->
+    <!-- HNavBar -->
+    <div class="hnav">
+        <a class="active" href="HaoZhangColumns.html">Challenge2</a>
+        <a href="HaoZhangHNavbarBio.html">Challenge1</a>
+        <a href="HaoZhangSettingUp.html">Challenge0</a>
+    </div>
+
+
+    <!-- Main wrapper. This div should wrap all columns, row wrapper, and title header -->
+    <div class="MainWrapper">
+        <!-- H2 Heading -->
+        <h2>WebTraining – Multi-Column Layout</h2>
+
+        <!-- Left Column -->
+        <div class="LeftColumn">
+            <p>Web development is the work involved in developing a web site for the Internet (World Wide Web) or an intranet (a private network).[1] Web development can range from developing a simple single static page of plain text to complex web-based internet applications (web apps), electronic businesses, and social network services. <br> <br> <cite>The defination above is from wikipedia.org</cite></p>
+        </div>
+
+        <!-- Row Wrapper. This div will contain two rows -->
+        <div class="RowWrapper">
+
+            <div class="MiddleColumnTop">
+                <p>Math for left columns physical width.</p>
+
+                <!-- Make a table to display math for left columns physical width -->
+
+                ​<table>
+
+                    <tr>
+                        <td></td>
+                        <td>225px (Content Width)</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>40px (left + right padding)</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>20px (left + right border)</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>40px (20px left + 20px right margin)</td>
+                    </tr>
+                    <tr>
+                        <td>=</td>
+                        <td>325px (physical width)</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="MiddleColumnBottom">
+                <p>Math for right columns physical width.</p>
+
+                <!-- Make a table to display math for right columns physical width -->
+                ​<table>
+                    <tr>
+                        <td></td>
+                        <td>187px (Content Width)</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>40px (left + right padding)</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>20px (left + right border)</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>40px (20px left + 20px right margin)</td>
+                    </tr>
+                    <tr>
+                        <td>=</td>
+                        <td>287px (physical width)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="RightColumn">
+            <p>Define Physical Width Versus Content Width:</p>
+            <hr><br>
+            <p>Content Width: <br> </p>
+            <p>It is the width of the content of a block.</p>
+            <br> <br><br>
+            <p>Physical Width: <br> </p>
+            <p>It is the sum of left and right margin width, two times of border width, left and right padding width, content width of a block.</p>
+        </div>
+
+    </div>
+    <h3> Created By: Hao Zhang </h3>
+</body>
+
+</html>

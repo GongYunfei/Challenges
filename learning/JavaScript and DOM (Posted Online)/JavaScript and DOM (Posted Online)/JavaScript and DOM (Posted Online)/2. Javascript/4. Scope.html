@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Created by Hao Zhang -->
+
+<!-- References: 
+        1) http://www.w3schools.com/js/js_scope.asp
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript Scope</title>
+		<link rel="stylesheet" type="text/css" href="app.css">
+		<script>
+
+			var pokemon = "Pikachu"; 
+
+			console.log("First log: " + pokemon); 
+
+			function pageLoaded() {
+
+				var trainer = "Nick"; 
+
+				console.log("Second log: " + pokemon); 
+
+				console.log("Third log: " + trainer); 
+
+			}
+
+			console.log("Forth log: " + pokemon); 
+
+			console.log("Fifth log: " + me); ; 
+			
+		</script>
+	</head>
+	<body onload="pageLoaded()">
+		<div id="animateMe">
+			<p>Do a barrel roll!</p>
+		</div>
+		<script>
+            console.log("Sixth log: " + pokemon); 
+
+			console.log("Seventh log: " + trainer);
+        </script>	
+	</body>
+</html>

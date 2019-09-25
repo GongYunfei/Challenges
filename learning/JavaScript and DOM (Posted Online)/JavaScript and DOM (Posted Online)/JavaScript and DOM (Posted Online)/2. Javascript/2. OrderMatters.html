@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Created by Hao Zhang -->
+
+<!-- References: 
+		1) http://www.w3schools.com/js/js_htmldom.asp
+		2) https://css-tricks.com/dom/
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript Order Matters</title>
+		<link rel="stylesheet" type="text/css" href="app.css">
+		<script>
+			var box = document.getElementById("animateMe"); 
+            
+            box.style.backgroundColor = "green"; 
+			
+		</script>
+		
+	</head>
+	<body>
+	
+		<script>
+		
+            var box = document.getElementById("animateMe"); 
+            
+            box.style.backgroundColor = "red"; 
+		
+	   </script>
+	
+		<div id="animateMe">
+			<p>Do a barrel roll!</p>
+		</div>
+        
+        <script>
+			
+            var box = document.getElementById("animateMe"); 
+            
+            box.style.backgroundColor = "pink"; 
+
+        </script>
+	
+	</body>
+</html>

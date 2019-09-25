@@ -1,0 +1,204 @@
+/*
+Create an H1 on the top of you page saying “Code Editor”
+*/
+#header{
+                color: deepskyblue;
+                text-align: center;
+                font-size: 35px;
+				margin-top:10px;
+				margin-bottom:5px;
+            }
+
+#CodeEditor{
+	/* Centered on the page */
+	margin: 5px auto; 
+	
+	/* Have a content width of 800px */
+	width: 840px;
+	
+}
+#CodeEditor:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#CodePane, #PreviewPane {
+                float: left;
+            }
+
+/* CSS & HTML Pane Styles */
+textarea {
+                width: 400px;
+                height: 250px;
+                display: block;
+                margin-bottom: 20px;
+                font-size: 16px;
+                font-family: monospace;
+                
+               
+}
+
+.cssTextarea{
+	
+	border-style: 1px solid lightgreen;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px lightgreen;
+}
+
+.cssTextarea:hover{
+	background-color: khaki;
+}
+.htmlTextarea{
+	border-style: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px gray;
+	
+}
+.htmlTextarea:hover{
+	background-color: khaki;
+}
+/*
+
+Use a div to create a preview pane
+a. Where you show the result of your code, there are many examples from class, put a
+border so you can easily see the preview pane
+
+*/
+#PreviewPane {
+                border: 2px dotted gray;
+                float: fixed;
+                width: 400px;
+                height: 520px;
+                margin-left: 20px;
+                padding: 3px;
+                border-style: 1px solid gray;
+                border-radius: 10px;
+                box-shadow: 2px 2px 2px 1px lightpink;
+}
+
+#PreviewPane:hover{
+	background-color:darkgray;
+}
+#ButtonArea{
+	/* Centered on the page */
+	margin: 5px auto; 
+	/* Have a content width of 800px */
+	width: 840px;
+	
+}
+   
+/*
+Create H4 in the bottom of your page and put your name/nickname there.
+*/
+ #footer{
+	 			float:left;
+                color: deepskyblue;
+                margin-top: 0px;
+	 			margin-left: 95px;
+	 			font-size:18px;
+               
+}
+            
+#footer:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+button {
+                
+				float:left;
+                font-size: 18px;
+				color: aliceblue;
+                width: auto;
+                padding-right:10px;
+				padding-left: 10px;
+				margin-right:10px;
+                background-color: lightseagreen;
+				border-radius: 10px;
+				border-color:lightseagreen;
+				
+                
+}
+
+
+/* Change button color and cursor style on hover */
+button:hover{
+    background-color: limegreen;
+    color: darkorange;
+	cursor:pointer;
+}
+
+/* Change button color on active */
+button:active{
+    background-color: darkgray;
+    color: darkred;
+}
+
+/* You cannot input on Preview Pane */
+
+#PreviewPane:hover{
+	cursor: not-allowed;
+}
+/*
+Create a tooltip for each button explaining the use of each button so when you hover over
+the button it will show you an explanation on how to use the button. See the screenshots for
+examples even though the text in the screenshot may be different.
+a. HTML: This button is used to show the result of your HTML code
+b. CSS: This button is used to turn on or off the CSS
+c. ERASE: This button is used to erase your code and reset the preview pane
+6. Add 1 second Opacity Transition to the tool tip.
+
+*/
+
+/*
+
+The following code was referred from w3c official website.
+
+*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; 
+}
+
+/* up tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  background-color: darkgray;
+  color: whitesmoke;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 1s;
+  font-size: 14px;
+}
+
+/* Bottom Pointer */
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: darkgray transparent transparent transparent;
+
+}
+
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+            

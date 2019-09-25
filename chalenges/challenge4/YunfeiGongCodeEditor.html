@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+Name: Yunfei Gong
+Date: 07/22/2019
+-->
+<html lang="en">
+
+	<head>
+		
+        <title id="tt">Yunfei Gong's CodeEditor</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="YunfeiGongCodeEditor.css">
+        <script src="Editor.js"></script>
+        <style id="styles"></style>
+    </head>
+    <body>
+        <div class="table">
+        <table>
+            <tr class="top">
+               <td colspan="2"><h3 id="h1">Code Editor</h3></td> 
+            </tr>
+            <tr>
+                <td>
+                    <textarea class="input" id="css" cols="80" ondblclick="changeCss()"  rows="18" placeholder="CSS..." onfocus="changeColor(this)" onblur="recoverColor(this)"></textarea>
+                    
+                </td>
+                <td rowspan="2">
+                   
+                   <div class="input2" id="xsq" onmouseover="changeColor(this)" onmouseout="recoverColor(this)"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class="input" id="html" cols="80" rows="18" placeholder="HTML..." ondblclick="changeHtml()" onfocus="changeColor(this)" onblur="recoverColor(this)"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button title=" This button is used to show the result of your HTML code" id="htmlButton" onclick="tranHtml()">HTML</button>
+                    <button title="This button is used to turn on or off the CSS" id="cssButton" onclick="tranCss()">CSS</button>
+                    <button title=" This button is used to erase your code and reset the preview pane" id="eraseButton" onclick="del()">ERASE</button>
+                    <h4 class="name" ondblclick="changeTitle()" id="h4">By Yunfei Gong</h4>
+                </td>
+                
+                
+            </tr>
+        
+        
+        </table>
+        </div>
+    </body>
+</html>

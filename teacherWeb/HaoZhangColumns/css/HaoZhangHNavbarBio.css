@@ -1,0 +1,237 @@
+/***********************Common CSS Style**************/
+body {
+    font-family: Arial;
+    background-color: azure;
+
+}
+
+h1 {
+    color: red;
+    font-family: verdana;
+    font-size: 300%;
+}
+
+h2 {
+    color: red;
+    font-family: verdana;
+    font-size: 250%;
+}
+
+h3 {
+    color: red;
+    font-family: verdana;
+    font-size: 200%;
+    text-align: left;
+}
+
+h5 {
+    text-align: right;
+}
+
+p {
+    color: blue;
+    font-family: courier;
+    font-size: 160%;
+    border: 3px solid powderblue;
+    padding: 20px;
+    border-style: hidden;
+}
+
+ul {
+    color: red;
+    font-family: courier;
+    font-size: 160%;
+}
+
+/************************Img Style*********************/
+
+/* W3 Logo style */
+
+.w3logo {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 256px;
+    /* clear:both; */
+}
+
+/* img float left */
+.leftfloat {
+    display: block;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 280px;
+    height: 380px;
+
+}
+
+/* img float right */
+.rightfloat {
+    display: block;
+    float: right;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 380px;
+    height: 300px;
+
+}
+
+/************ Webpage Header Style *******************/
+
+.header {
+    padding: 30px;
+    text-align: center;
+    background: lightblue;
+    color: darkblue;
+    font-size: 50px;
+}
+
+/************* Double Border for Heading ***************/
+
+.heading {
+    border-color: coral;
+    border-width: 8px;
+    border-style: double;
+    background-color: bisque;
+}
+
+/* Make your heading in the right of your page */
+.heading h3 {
+    color: red;
+    font-family: verdana;
+    font-size: 200%;
+    text-align: right;
+}
+
+/***************Paragraph Class*************************/
+/* Dashed Border */
+
+.bio {
+    color: blue;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 180%;
+    border: 5px solid powderblue;
+    padding: 10px;
+    border-style: dashed;
+    background-color: antiquewhite;
+    margin-top: 10px;
+    margin-bottom: 0px;
+
+}
+
+/* Different paragraph, different style */
+/* Dotted Border */
+.pClass {
+    color: palevioletred;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 180%;
+    border: 5px solid powderblue;
+    padding: 20px;
+    border-style: dotted;
+    margin-top: 10px;
+
+
+}
+
+/* Style the horizontal navigation bar */
+
+/*
+
+Make sure when hover over the button it will change color */
+
+.hnav{
+    overflow: hidden;
+    background-color: darkgray;
+    box-sizing: content-box;
+}
+
+/* Style the Hnav links */
+.hnav a{
+    float: left;
+    display: block;
+    color: floralwhite;
+    text-align: center;
+    padding: 20px 28px;
+    text-decoration: none;
+}
+
+/* Change color on hover on non-current page */
+
+.hnav a:hover:not(.active){
+    background-color: darkgreen;
+    color: darkorange;
+}
+
+/* Change color on hover on current page */
+.hnav a:hover{
+    background-color: limegreen;
+    color: darkorange;
+}
+
+/* Change color on active */
+.hnav a:active{
+    background-color: darkgray;
+    color: darkred;
+}
+
+/*  Add an Active class to the current class and change the background color */
+.active {
+    background-color: palevioletred;
+}
+
+.hnav:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create column */
+.topic {
+    float: left;
+    width: 100%;
+    background-color: azure;
+    padding: 10px;
+
+
+}
+
+/* Clear floats after the columns */
+
+.topic:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.challenge1 {
+    float: left;
+    width: 100%;
+    background-color: deepskyblue;
+    padding: 10px;
+    margin-top: 2px;
+}
+
+.challenge1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+    font-size: 30px;
+    color: darkslateblue;
+    clear: left;
+}
+

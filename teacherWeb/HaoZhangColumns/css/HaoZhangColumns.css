@@ -1,0 +1,236 @@
+/* Style the horizontal navigation bar */
+
+/*
+
+Make sure when hover over the button it will change color */
+
+.hnav {
+    overflow: hidden;
+    background-color: darkgray;
+    box-sizing: content-box;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+
+/* Style the Hnav links */
+.hnav a {
+    float: left;
+    display: block;
+    color: floralwhite;
+    text-align: center;
+    padding: 20px 28px;
+    text-decoration: none;
+
+}
+
+/* Change color on hover on non-current page */
+
+.hnav a:hover:not(.active) {
+    background-color: darkgreen;
+    color: darkorange;
+}
+
+/* Change color on hover on current page */
+.hnav a:hover {
+    background-color: limegreen;
+    color: darkorange;
+}
+
+/* Change color on active */
+.hnav a:active {
+    background-color: lightgrey;
+    color: darkred;
+}
+
+/*  Add an Active class to the current class and change the background color */
+.active {
+    background-color: palevioletred;
+}
+
+.hnav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.MainWrapper {
+    /* Centered on the page */
+    margin: 20px auto;
+
+    /* Have a content width of 1090px */
+    width: 1090px;
+
+    /* Have a 10-pixel outset border with a color */
+    border-color: lightgray;
+    border-width: 10px;
+    border-style: outset;
+    border-radius: 50px 50px;
+
+    /* Contains 10-pixel padding */
+    padding: 10px;
+    overflow: hidden;
+
+    /* Background color changing step by step. Study from CSS REFERENCE BOOK BUT I CHANGE ITS CODE by myself, I do not copy the code */
+    background: -webkit-linear-gradient(to bottom right, aliceblue, lightblue);
+    /* Safari */
+    background: -o-linear-gradient(to bottom right, aliceblue, lightblue);
+    /* Opera */
+    background: -moz-linear-gradient(to bottom right, aliceblue, lightblue);
+    /* Firefox */
+    background: linear-gradient(to bottom right, aliceblue, lightblue);
+    /* standard browser */
+
+}
+
+.MainWrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* create an H2 and make the H2 center aligned. */
+h2 {
+    text-align: center;
+}
+
+
+/* LeftColumn style */
+.LeftColumn {
+
+    float: left;
+    text-align: justify;
+    background-color: cornsilk;
+    /*The content width of the left column 225 pixels, a height of 400 pixels */
+    width: 225px;
+    height: 400px;
+
+    /* 20 pixels of padding, 20 pixels of margin*/
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    /* Math the magin left and right width according to the instructions */
+    margin-left: 20px;
+    margin-right: 20px;
+
+    /* A 10-pixel outset border with a color of your choosing, other than the default, a border radius of your choosing other than the default */
+    border-width: 10px;
+    border-style: outset;
+    border-radius: 50px 50px;
+    border-color: lightgray;
+
+}
+
+/* RowWrapper style */
+.RowWrapper {
+
+    float: left;
+    /* 438 pixels wide with a margin of 20 pixels. */
+    width: 438px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    /* Math the magin left and right width according to the instructions */
+    margin-left: 20px;
+    margin-right: 20px;
+
+
+}
+
+/* The content width of both rows in the Row Wrapper should be 378 pixels, with a height of
+155 pixels, 20 pixels of padding, a 10-pixel outset border with a color of your choosing other
+than default, and a border-radius of choosing other than the default.
+*/
+.MiddleColumnTop {
+
+
+    text-align: center;
+    background-color: indianred;
+    width: 378px;
+    height: 155px;
+    border-style: outset;
+    border-width: 10px;
+    border-radius: 30px 30px;
+    border-color: lightgray;
+    padding: 20px;
+
+    /* Math the magin size according to the instructions */
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+
+}
+
+.MiddleColumnBottom {
+
+
+    text-align: center;
+    background-color: lightseagreen;
+    width: 378px;
+    height: 155px;
+    border-style: outset;
+    border-width: 10px;
+    border-radius: 30px 30px;
+    border-color: lightgray;
+    padding: 20px;
+
+    /* Math the magin size according to the instructions */
+    margin-top: 30px;
+    margin-left: 0px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+
+
+}
+
+
+/* RightColumn style */
+.RightColumn {
+
+    float: left;
+    text-align: justify;
+    background-color: gold;
+    /*The content width of the left column 225 pixels, a height of 400 pixels */
+    width: 187px;
+    height: 400px;
+
+    /* 20 pixels of padding, 20 pixels of margin*/
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    /* Math the magin left and right width according to the instructions */
+    margin-left: 20px;
+    margin-right: 20px;
+
+    /* A 10-pixel outset border with a color of your choosing, other than the default, a border radius of your choosing other than the default */
+    border-width: 10px;
+    border-style: outset;
+    border-radius: 50px 50px;
+    border-color: lightgray;
+
+
+}
+
+/* Other elements' styles */
+
+h3 {
+    text-align: center;
+}
+
+p {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Display the calculation process for the physical width of columns */
+table {
+    margin: 0px auto;
+
+}
+
+td {
+    text-align: left;
+}

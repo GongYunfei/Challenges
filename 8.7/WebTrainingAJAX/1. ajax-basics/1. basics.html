@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Created by Hao Zhang -->
+<html>
+<head>
+	<title>AJAX Intro</title>
+	<script>
+    
+		function getContent() {
+            //创建异步对象
+            var xmlHttp = new XMLHttpRequest();
+            //监听状态变化
+            xmlHttp.onreadystatechange = function() {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+					var response = xmlHttp.responseText;
+					
+					var contentBox = document.getElementById("contentBox");
+					
+					contentBox.innerHTML = response;     
+                }
+            };
+            
+			document.getElementById('contentBox').innerHTML = "Loading...";
+            //设置请求方式和地址
+            xmlHttp.open("GET", "responder.php", true);
+            //发送请求
+            xmlHttp.send();     
+		}
+	</script>
+</head>
+<body>
+	<h1>Content</h1>
+	<p id="contentBox"></p>
+	<button type="button" onclick="getContent()">Get Content</button>
+</body>
+</html>

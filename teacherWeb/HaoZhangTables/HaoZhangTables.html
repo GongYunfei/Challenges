@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+Name: Hao Zhang
+Date: 02/13/2019
+-->
+<html lang="en">
+
+	<head>
+		<!-- param, meta, styles, scripts -->
+        <title> Hao Zhang's Tables</title>
+		<meta charset="utf-8">
+<!--
+
+Font family “Permanent Marker” link from google
+-->
+<!--		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Permanent+Marker"> -->
+		<link rel="stylesheet" type="text/css" href="css/HaoZhangTables.css">
+    </head>
+    <body>
+		
+<!-- MovieTrailer realize -->
+		<div id="ColdPursuit" class="MovieTrailer">
+		 <iframe id="ClickMe" src="https://www.youtube.com/embed/7C2Nad0aMPg"></iframe>
+		 <a class="CButton" href="#ClickMe">Click me to close it</a>
+		</div>
+		<div id="MissBala" class="MovieTrailer">
+		 <iframe id="ClickMe1" src="https://www.youtube.com/embed/e-kPf-n4Mto"></iframe>
+		 <a class="CButton" href="#ClickMe1">Click me to close it</a>
+		</div>
+		
+		
+		 <div class="BackgroundDiv">
+		
+<!--        
+    Create a table   
+-->
+    	<table class="MovieTheaterTable">
+<!--  Use the colspan attribute to make a <th> tag (table header) stretch across the
+width of the table.
+-->
+  			<tr class="header headerFirst">
+    			<th colspan="7">Movie Theater Showtimes</th>
+    		</tr>
+<!--  Use the colspan attribute to make a <th> tag (table header) stretch across the
+width of the table.
+-->	
+  			<tr class="header headerSecond">
+ 				<th colspan="7">Feburary 13, 2019</th>
+          	</tr>
+  			<tr class="Row3">
+    			<th>Poster</th>
+				<th>Movie</th>
+				<th>Rating</th>
+				<th>Length</th>
+				<th colspan="2">Showtimes</th>
+				<th>Amenities</th>
+  			</tr>
+<!-- 
+“Poster”, “Movie”, “Rating”, and “Length” columiframes should span across all the rows in the
+“Showtimes” column
+The “Amenities” columns should span across all the rows in the “Showtimes” column
+
+-->
+  			<tr>
+    			<td rowspan="4" > <a href="#ColdPursuit"><img class="PosterImage" src="img/ColdPursuitPoster.jpg" alt="Cold Pursuit"></a></td> 
+			    <td rowspan="4" >Cold Pursuit</td>
+				<td rowspan="4" >R</td>
+				<td rowspan="4">119 Minutes</td>
+				<td class="daytimeShow" colspan="2" rowspan="1">12:30PM</td>
+				<td rowspan="4">Closed Capttion <br>
+					Descriptive Video,<br>
+					Stadium Seating
+				 </td>
+			</tr>
+			<tr> <td class="daytimeShow" colspan="2" rowspan="1">3:20PM</td></tr>
+			<tr> <td colspan="2" rowspan="1">7:00PM</td></tr>
+			<tr> <td colspan="2" rowspan="1">10:00PM</td></tr>
+			<tr>
+    			<td rowspan="4"><a href="#MissBala"><img class="PosterImage" src="img/MissBalaPoster.jpg" alt="Miss Bala"></a> </td>
+    			<td rowspan="4">Miss Bala</td>
+    			<td rowspan="4">PG-13</td>
+				<td rowspan="4">104 Minutes</td>
+				<td class="daytimeShow" colspan="1" rowspan="1">12:55PM</td>
+				<td class="daytimeShow" colspan="1" rowspan="1">2:30PM</td>
+				<td rowspan="4">Closed Capttion<br>
+					Descriptive Video,<br>
+					Stadium Seating
+				</td>
+			</tr>
+			<tr> <td class="daytimeShow" colspan="1" rowspan="1">4:00PM</td> 
+			     <td class="AllCenter" colspan="1" rowspan="1">5:05PM</td> 
+			</tr>
+			<tr> <td colspan="1" rowspan="1">7:55PM</td> 
+				<td class="AllCenter" colspan="1" rowspan="1">8:25PM</td> 
+			</tr>
+			<tr> <td colspan="1" rowspan="1">9:55PM</td> 
+				 <td class="AllCenter" colspan="1" rowspan="1">10:25PM</td> 
+			</tr>
+		</table>
+
+<!-- 
+
+1. After the table is complete, create a custom CSS container that will display one move from
+the movie list at https://www.regmovies.com/theatres/regal-columbia-rpx Regal Columbia &
+RPX
+2. To create the container, first create a wrapper div that will hold two child div’s (Much like
+from challenge 3!) and an image (3 columns).
+3. The image in the wrapper should be on the very left of the container (like a float left), followed
+by a second div which will hold movie information, and one last div that will be next to that
+movie information. (Check the image for an example)
+
+-->
+        <div class="WrapperDiv">
+		
+			
+			<!-- Left Column -->
+            <div class="LeftColumn">
+				<img class="Image" src="img/ColdPursuitPoster1.jpg" alt="Cold Pursuit">  
+			</div>
+            
+            <!-- Middle Column -->
+			<div class="MiddleColumn">
+                <h1 class="MovieTitle">Cold Pursuit</h1>
+				<hr class="HRLine"> <br>
+				<h2 class="RatingLength">R|1 hr. 54 min.</h2>
+				<p class="Amenities">
+					<br>
+					<br>
+					<br>
+					CC, DV, SS
+				</p>
+			</div>
+		     
+            <!-- Right Column -->
+            <div class="RightColumn">
+				<h1 class="Viewingtimes">Viewing Times</h1>
+				<hr class="HRLine">
+				<table class="DisplayTime">
+					<tr>
+						<td>12:30PM</td>
+						<td>3:20PM</td>
+					</tr>
+					<tr>
+						<td>7:00PM</td>
+						<td>10:00PM</td>
+					</tr>
+				</table>
+		  </div>
+			
+       </div>
+	 </div>	
+	
+    </body>
+</html>

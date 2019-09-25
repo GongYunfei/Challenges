@@ -1,0 +1,8 @@
+@media screen and (orientation: portrait) {   
+  /*竖屏 css*/  
+	<link rel="stylesheet" media="all and (orientation:portrait)" href="portrait.css"> 
+}    
+@media screen and (orientation: landscape) {   
+  /*横屏 css*/   
+	<link rel="stylesheet" media="all and (orientation:landscape)" href="landscape.css"> 
+} 

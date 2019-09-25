@@ -1,0 +1,68 @@
+
+.policy{
+	
+}
+.right{
+    text-align:right;
+}
+.center {
+	
+    text-align:center;
+	
+}
+.padding6{
+    padding:6px;
+}
+
+.policy {
+    border:solid 1px #aaa;
+    padding:4px;
+	width: 900px;
+	height:600px;
+	font-family: 'Oranienbaum', serif;
+	
+}
+
+.w100 {
+    width: 100%;
+}
+.buttonWidth{
+	width: 100px;
+}
+.registerButton{
+	width:220px;
+	margin: 10px auto;
+	
+
+}
+.registerTable {
+	width:900px;
+	margin:10px auto;
+	
+}
+
+
+.cellText{
+	width: 100px;
+	text-align: right;
+}
+
+.cellIcon{
+	width: 58px;
+	text-align: right;
+}
+.cellalignRight{
+	text-align: right;
+}
+.cell251{
+	width: 251px;
+	text-align: left;
+}
+.cell149{
+	width: 149px;
+}
+.verificationTable{
+	width: 400px;
+	text-align: left;
+	
+}

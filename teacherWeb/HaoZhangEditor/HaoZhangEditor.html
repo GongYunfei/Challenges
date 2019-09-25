@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--This document was created by Hao Zhang on 07/22/2019-->
+<!-- Hao Zhang		
+     
+     07/22/2019-->
+
+<html lang="en">
+
+<head>
+    <link href="css/HaoZhangEditor.css" type="text/css" rel="stylesheet" />
+
+    <title> Hao Zhang's Challenge Editor</title>
+    <meta charset="utf-8">
+
+    <style id="styles"></style>
+
+</head>
+
+<body>
+
+    <h1 id="header">Code Editor</h1>
+    <br>
+    <div id="CodeEditor">
+        <div id="CodePane">
+
+            <textarea id="css" class="cssTextarea" placeholder="CSS..." ondblclick="doubleclickcss()"></textarea>
+            <textarea id="html" class="htmlTextarea" placeholder="HTML..." ondblclick="doubleclickhtml()"></textarea>
+
+        </div>
+
+        <div id="PreviewPane"></div>
+
+    </div>
+    <div id="ButtonArea">
+
+        <button type="button" id="launch" class="tooltip" onclick="launch()">Launch
+            <span class="tooltiptext">This button is used to show the result of your HTML code</span>
+        </button>
+        <button type="button" id="toggle" class="tooltip" onclick="toggleStyle()">Toggle
+            <span class="tooltiptext">This button is used to turn on or off the CSS</span>
+        </button>
+        <button type="button" id="clear" class="tooltip" onclick="ClearPane()">Clear
+            <span class="tooltiptext">This button is used to erase your code and reset the preview pane</span>
+        </button>
+        <h4 id="footer" ondblclick="doubleclickfooter()">Honglei Wang</h4>
+    </div>
+
+    <!--
+All scripts (JavaScript) should be in an external JS file. I name my file
+HaoZhangEditor.js in js subdirectory.
+-->
+
+    <script src="js/HaoZhangEditor.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>ajex-get 方法测试</title>
+	<meta charset="utf-8">
+	<script src="myAjax.js"></script>
+</head>
+	<script>
+	    window.onload=function(){
+			var oBtn=document.querySelector("button");
+			
+			oBtn.onclick=function(){
+				ajax("ajax-get.php",{"userName":"gyf","userPWD":"123456"},function(xhr){alert(xhr.responseText);},function(xhr){alert("请求失败");});
+						
+				}
+				
+			}
+			
+		
+	</script>
+<body>
+	
+		<!--
+        <form action="get.php" method="get">
+        <input type="text" name="userName">
+		<input type="text" name="userPwd">
+        <input type="button" value="确定">
+         -->
+		
+	
+		<button>确定</button>
+	  
+	
+</body>
+</html>
